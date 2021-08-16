@@ -72,7 +72,7 @@ export class LoginComponent implements OnInit {
     // const newUser = user.additionalUserInfo.isNewUser;
     const emailVerified = user.user.emailVerified;
     if (emailVerified) {
-      this.route.navigate(['/landing']);
+      this.route.navigate(['/dashboard']);
     } else {
       this.snackbarService.showSnackbar(
         'Verify your email first',
