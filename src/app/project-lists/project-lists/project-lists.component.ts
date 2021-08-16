@@ -1,4 +1,4 @@
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { DataService } from './../../services/data.service';
 import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { map } from 'rxjs/operators';
@@ -14,7 +14,8 @@ export class ProjectListsComponent implements OnInit {
   public colorCode!: Observable<any>;
   constructor(
     private dataService: DataService,
-    private activeRoute: ActivatedRoute
+    private activeRoute: ActivatedRoute,
+    private route: Router
   ) { }
 
   ngOnInit(): void {
@@ -26,5 +27,7 @@ export class ProjectListsComponent implements OnInit {
         })
       );
   }
-
-}
+  public projectDetails() {
+    this.route.navigate(['project-details']);
+  }
+}//END OF CLASS

@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="rating">
+    <mat-icon aria-hidden="false" aria-label="Example home icon">grade</mat-icon>
+    <mat-icon aria-hidden="false" aria-label="Example home icon">grade</mat-icon>
+    <mat-icon aria-hidden="false" aria-label="Example home icon">grade</mat-icon>
+  </div>
+  <div class="container-projectName">
+    <h2 class="heading--2">Cohorts for HIV Resistance and Progression in Indian Children and Adults (CoHRPICA) BT/PR21326/MED/29/1158/2016</h2>
+  </div>
+  <div class="container-background">
+    <p class="container-background--text">Cohorts for HIV Resistance and Progression in Indian Children and Adults (CoHRPICA) BT/PR21326/MED/29/1158/2016</p>
+  </div>
+  <div class="container-aim">
+    <p class="container-background--aim">Cohorts for HIV Resistance and Progression in Indian Children and Adults (CoHRPICA) BT/PR21326/MED/29/1158/2016</p>
+  </div>
+  <div class="container-objectives">
+    <h3 class="heading--3">Objectives</h3>
+    <mat-list>
+      <mat-list-item *ngFor="let message of objectives" >
+        <mat-icon matListIcon>fiber_manual_record</mat-icon>
+        <p matLine>
+          <span> {{message}} </span>
+        </p>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="container-outcomes">
+    <img src="../../../assets/images/main-qimg.jpg" alt="chart">
+  </div>
+  <div class="project-lists--sharing">
+    <app-dashboard-table-widget></app-dashboard-table-widget>
+  </div>
+  <div class="schematics">
+    <img src="../../../assets/images/pert.png" alt="">
+  </div>
+</div>

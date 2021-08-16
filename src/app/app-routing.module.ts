@@ -6,6 +6,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { AuthGuard } from './guard/auth.guard';
+import { ProjectDetailsComponent } from './project-details/project-details/project-details.component';
 
 const routes: Routes = [
   { path: 'login', component: LoginComponent },
@@ -15,7 +16,16 @@ const routes: Routes = [
     component: LandingComponent,
     canActivate: [AuthGuard]
   },
-  { path: 'project-lists', component: ProjectListsComponent },
+  {
+    path: 'project-lists',
+    component: ProjectListsComponent,
+    canActivate: [AuthGuard]
+  },
+  {
+    path: 'project-details',
+    component: ProjectDetailsComponent,
+   // canActivate: [AuthGuard]
+  },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },
 ];

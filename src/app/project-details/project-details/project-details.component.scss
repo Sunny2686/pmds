@@ -1,0 +1,8 @@
+.container{
+  height: 100%;
+  display: grid;
+
+  grid-template-rows: repeat(5,min-content) 35vw 40vw;
+  grid-template-columns:[full-start] repeat(8,minmax(min-content, 1fr)) [full-end];
+  grid-gap: 1rem;
+}

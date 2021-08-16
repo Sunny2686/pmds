@@ -1,3 +1,4 @@
+import { ProjectDetailsModule } from './project-details/project-details.module';
 import { ProjectListsModule } from './project-lists/project-lists.module';
 import { SharedModule } from './shared/shared.module';
 import { environment } from './../environments/environment';
@@ -36,9 +37,10 @@ firebase.default.initializeApp(environment.firebase)
     AngularFirestoreModule,
     AngularFireAuthModule,
     ShowHidePasswordModule,
+    ProjectListsModule,
+    ProjectDetailsModule,
     MaterialModule,
     SharedModule,
-    ProjectListsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

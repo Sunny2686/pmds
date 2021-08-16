@@ -25,7 +25,7 @@
               <!-- <i matSuffix class="material-icons" showHideTrigger="mysecretpassword"  [showHideStatus]="{ materialIcon: true, id: 'mysecretpassword' }" ></i> -->
               <mat-hint>Minimum password length is eight(8) character</mat-hint>
           </mat-form-field>
-      <button mat-raised-button class="btn btn-modified" type="submit" [disabled]="signupForm?.invalid">Signup</button>
+      <button mat-raised-button class="btn btn-modified" type="submit" *ngIf="signupForm?.valid">Signup</button>
       <button mat-raised-button class="btn btn-modified" (click)="onCancel()" *ngIf="!spinner;else loader" [class.hide]="signupForm?.valid" type="button">Cancel</button>
       <ng-template #loader>
           <app-spinner></app-spinner>
