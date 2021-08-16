@@ -1,0 +1,14 @@
+:host {
+  display: grid;
+  height: 100%;
+  padding: 2rem 1rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 1rem;
+}
+
+.header-title {
+  font-size: 1.7rem;
+  letter-spacing: 0.8px;
+  word-break: break-word;
+}

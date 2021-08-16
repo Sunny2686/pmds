@@ -1,0 +1,16 @@
+<!-- <div class="container"> -->
+  <ng-container *ngFor="let project of projectData">
+    <mat-card [style.backgroundColor]="colorCode|async"
+              class="mat-elevation-z4" fxLayout="column" fxLayoutAlign="space-between center">
+              <mat-card-header>
+                <mat-card-title><span class="header-title">{{project.projectName}}</span> </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button class="btn btn-modified"><span
+                    style="color:black; font-size:1.5rem; letter-spacing:1px">View Detils</span></button>
+              </mat-card-actions>
+            </mat-card>
+  </ng-container>
+<!-- </div> -->

@@ -1,1 +1,44 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+html{
+  font-size: 60.5%;
+}
+html, body { height: 100%; }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  box-sizing: border-box;
+ }
+
+ a:link,
+ a:visited,
+ a:hover{
+   text-decoration: none;
+   outline: none;
+   display: inline-block;
+
+ }
+ .btn {
+  font-size: 1.8rem;
+  letter-spacing: 1px;
+  padding: 0 4px;
+  background: dodgerblue;
+  color: white;
+}
+.mat-icon-happy {
+  color: rgb(7, 71, 7);
+}
+
+.mat-icon-sad {
+  color: rgb(129, 12, 12);
+}
+

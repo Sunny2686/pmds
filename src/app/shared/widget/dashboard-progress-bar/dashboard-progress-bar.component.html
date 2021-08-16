@@ -1,0 +1,13 @@
+<div class="container mat-elevation-z4" fxLayout="column" fxLayoutAlign="space-between center">
+  <h3 class="heading--3">Project Progress status</h3>
+  <div>
+    <ng-container *ngFor="let progress of projectData">
+      <div class="container-project--progressbar" >
+        <p class="container-project--name">{{progress.projectName}}</p>
+        <mat-progress-bar mode="determinate" [value]="progress.status"></mat-progress-bar>
+      </div>
+      <mat-divider></mat-divider>
+    </ng-container>
+  </div>
+</div>
+

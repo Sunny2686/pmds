@@ -1,0 +1,27 @@
+<div class="container" fxLayoutAlign="center center" fxLayout="column">
+  <h2 class="form--header">Login Page</h2>
+  <form class="form" [formGroup]="loginForm" (ngSubmit)="login()" fxLayout="column" fxLayoutAlign="center center">
+      <mat-form-field appearance="fill">
+          <mat-label>Enter email</mat-label>
+          <input matInput placeholder="Email id" type="email" formControlName="email">
+          <mat-icon matSuffix *ngIf="loginForm?.get('email')?.valid" class="mat-icon-happy">thumb_up</mat-icon>
+          <mat-icon matSuffix *ngIf="loginForm.get('email')?.invalid && loginForm.get('email')?.touched" class="mat-icon-sad">thumb_down</mat-icon>
+          <mat-hint>Hint:Enetr full email id.</mat-hint>
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+          <mat-label>Enter password</mat-label>
+          <input matInput placeholder="Password" formControlName="password" id="mysecretpassword" type="password" showHideInput>
+          <mat-icon matSuffix *ngIf="loginForm?.get('password')?.valid" class="mat-icon-happy">thumb_up</mat-icon>
+          <mat-icon matSuffix *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched" class="mat-icon-sad">thumb_down</mat-icon>
+          <!-- <i matSuffix class="material-icons" showHideTrigger="mysecretpassword" [showHideStatus]="{ materialIcon: true, id: 'mysecretpassword' }"></i> -->
+          <mat-hint>Minimum password length is eight(8) character</mat-hint>
+      </mat-form-field>
+      <button mat-raised-button type="submit" class="btn btn-modified" *ngIf="loginForm.valid">Confirm</button>
+      <button mat-raised-button type="button" class="btn btn-modified" (click)=" onCancel() " *ngIf="(spinner | async) === false; else loader">Cancel</button>
+      <ng-template #loader>
+          <app-spinner></app-spinner>
+      </ng-template>
+      <h2 *ngIf="isError | async" style="color: rgb(211, 81, 81);">Please check the password you entered.</h2>
+  </form>
+
+</div>

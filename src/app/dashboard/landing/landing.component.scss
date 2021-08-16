@@ -1,0 +1,21 @@
+mat-card {
+  width: 30rem;
+}
+.btn-modified{
+  background-color:white ;
+}
+mat-card-title{
+  font-size: 1.5rem;
+  letter-spacing: 0.4px;
+  font-weight: 400;
+}
+mat-drawer-container{
+  height: 100%;
+  mat-drawer{
+    width: 200px;
+    padding: 1rem;
+  }
+  mat-drawer-content{
+    padding: 1rem;
+  }
+}
