@@ -1,37 +1,83 @@
 <div class="container">
-  <div class="rating">
-    <mat-icon aria-hidden="false" aria-label="Example home icon">grade</mat-icon>
-    <mat-icon aria-hidden="false" aria-label="Example home icon">grade</mat-icon>
-    <mat-icon aria-hidden="false" aria-label="Example home icon">grade</mat-icon>
+  <div class="container-rating" fxLayout="column" fxLayoutAlign="space-around center">
+    <h4 class="heading--4">Overall Project Rating</h4>
+    <div fxLayout fxLayoutAlign="center center">
+      <mat-icon aria-hidden="false" aria-label="Example home icon" color="accent">grade</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" color="accent">grade</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" color="accent">grade</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" color="accent">grade</mat-icon>
+      <mat-icon aria-hidden="false" aria-label="Example home icon" color="accent">grade</mat-icon>
+    </div>
   </div>
-  <div class="container-projectName">
+  <div class="container-projectName" fxLayoutAlign="center center">
     <h2 class="heading--2">Cohorts for HIV Resistance and Progression in Indian Children and Adults (CoHRPICA) BT/PR21326/MED/29/1158/2016</h2>
   </div>
-  <div class="container-background">
+  <div class="container-background" >
+    <mat-form-field class="example-full-width" appearance="fill">
+      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
+    </mat-form-field>
     <p class="container-background--text">Cohorts for HIV Resistance and Progression in Indian Children and Adults (CoHRPICA) BT/PR21326/MED/29/1158/2016</p>
   </div>
-  <div class="container-aim">
-    <p class="container-background--aim">Cohorts for HIV Resistance and Progression in Indian Children and Adults (CoHRPICA) BT/PR21326/MED/29/1158/2016</p>
-  </div>
-  <div class="container-objectives">
-    <h3 class="heading--3">Objectives</h3>
+  <div class="container-objectives" fxLayout="column">
+    <h4 class="heading--3" fxFlexAlign="center">Objectives</h4>
     <mat-list>
-      <mat-list-item *ngFor="let message of objectives" >
-        <mat-icon matListIcon>fiber_manual_record</mat-icon>
-        <p matLine>
-          <span> {{message}} </span>
+      <mat-list-item *ngFor="let message of objectives; let i=index" >
+        <!-- fiber_manual_record -->
+        <p matLine class="para">
+          <span class="objectives-count">{{i+1}}.</span><span class="objectives"> {{message}}</span>
         </p>
         <mat-divider></mat-divider>
       </mat-list-item>
     </mat-list>
   </div>
-  <div class="container-outcomes">
-    <img src="../../../assets/images/main-qimg.jpg" alt="chart">
+  <div class="container-outcomes--list" fxLayout="column">
+    <h4 class="heading--3" fxFlexAlign="center">Project Outcomes</h4>
+    <mat-list>
+      <mat-list-item *ngFor="let message of objectives; let i=index" >
+        <p class="para" matLine >
+          <span class="objectives-count">{{i+1}}.</span><span class="objectives"> {{message}}</span>
+        </p>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
   </div>
-  <div class="project-lists--sharing">
+  <div class="container-physical-progress" fxLayout="column">
+    <h4 class="heading--3" fxFlexAlign="center">Physical Progress</h4>
+    <mat-list >
+      <mat-list-item *ngFor="let message of objectives; let i=index" >
+        <!-- fiber_manual_record -->
+        <p class="para" matLine>
+          <span class="objectives-count">{{i+1}}.</span><span class="objectives"> {{message}}</span>
+        </p>
+        <mat-divider></mat-divider>
+      </mat-list-item>
+    </mat-list>
+  </div>
+  <div class="container-project-overlapping" fxLayout="column">
+    <h4 fxFlexAlign="center" class="heading--3">Has the project any overlaping/connectivity with other project</h4>
+<mat-form-field appearance="outline">
+  <mat-label>Select yes or no</mat-label>
+  <mat-select>
+    <mat-option [value]="'yes'"> Yes</mat-option>
+    <mat-option [value]="'no'"> No</mat-option>
+  </mat-select>
+</mat-form-field>
+  </div>
+  <div class="container-financial-overrun" fxLayout="column">
+    <h4 class="heading--4" fxFlexAlign="center">Financial overrun if any?</h4>
+<mat-form-field appearance="outline">
+  <mat-label>Select yes or no</mat-label>
+  <mat-select>
+    <mat-option [value]="'yes'"> Yes</mat-option>
+    <mat-option [value]="'no'"> No</mat-option>
+  </mat-select>
+</mat-form-field>
+  </div>
+  <div class="container-outcomes--schematics" fxLayout="column">
+    <h4 class="heading--3" fxFlexAlign="center">Schemetic Representation of Project</h4>
+    <img src="../../../assets/images/pert.png" alt="chart" width="100%" height="100%" style="object-fit: contain;">
+  </div>
+  <div class="project-lists--sharing" fxLayout="column">
     <app-dashboard-table-widget></app-dashboard-table-widget>
   </div>
-  <div class="schematics">
-    <img src="../../../assets/images/pert.png" alt="">
-  </div>
-</div>
+

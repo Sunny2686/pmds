@@ -14,6 +14,9 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatListModule} from '@angular/material/list';
+import {TextFieldModule} from '@angular/cdk/text-field';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -34,7 +37,9 @@ import {MatListModule} from '@angular/material/list';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-    MatListModule
+    MatListModule,
+    TextFieldModule,
+    MatSelectModule
 
   ],
   exports: [
@@ -51,7 +56,9 @@ import {MatListModule} from '@angular/material/list';
     MatSnackBarModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
-    MatListModule
+    MatListModule,
+    TextFieldModule,
+    MatSelectModule
   ]
 })
 export class MaterialModule { }
