@@ -1,6 +1,11 @@
 <div class="container mat-elevation-z4" fxLayout="column" fxLayoutAlign="space-between center">
   <h3 class="heading--3">Project Progress status</h3>
-  <div>
+  <highcharts-chart
+  [Highcharts] = "Highcharts"
+  [options] = "chartOptions"
+  style = "width: 100%; height: 400px; display: block;">
+</highcharts-chart>
+  <!-- <div>
     <ng-container *ngFor="let progress of projectData">
       <div class="container-project--progressbar" >
         <p class="container-project--name">{{progress.projectName}}</p>
@@ -8,6 +13,6 @@
       </div>
       <mat-divider></mat-divider>
     </ng-container>
-  </div>
+  </div> -->
 </div>
 

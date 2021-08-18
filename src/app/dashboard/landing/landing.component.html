@@ -1,9 +1,9 @@
-<div class="container">
+ <div class="container">
   <mat-drawer-container>
     <mat-drawer mode="side" [opened]="toggleSidebar$ | async">
     </mat-drawer>
-    <mat-drawer-content>
-      <h3 class="heading-3">DASHBOARD</h3>
+    <mat-drawer-content fxLayout="column">
+      <h3 class="heading--3" fxFlexAlign="center" style="padding: 5px 0 10px;">DASHBOARD</h3>
       <div fxLayout="row" fxLayoutAlign="space-around center" fxLayoutGap="20px" fxLayout.xs="column"
         fxLayoutAlign.xs="center center" class="container-card">
         <ng-container *ngFor="let p of projectCost">
@@ -21,18 +21,29 @@
           </mat-card>
         </ng-container>
       </div>
-      <div class="container-dashboard">
-        <div class="container-dashboard--table">
+      <div class="dashboard">
+        <div class="dashboard--table">
           <app-dashboard-table-widget></app-dashboard-table-widget>
         </div>
-        <div class="container-dashboard--progress">
+        <div class="dashboard--progress">
           <app-dashboard-progress-bar-widget></app-dashboard-progress-bar-widget>
         </div>
-        <div class="container-dashboard--column">
+        <div class="dashboard--column">
           <app-dashboard-column-widget></app-dashboard-column-widget>
         </div>
+        <div class="dashboard-notification">
+          <h3 class="heading--h3">Notification Panel</h3>
+          <mat-nav-list>
+            <mat-list-item *ngFor="let link of links">
+              <a matLine href="..." fxLayoutAlign="start center">
+                 <mat-icon>info</mat-icon>
+               <span class="dashboard-notification-link"> {{ link }}</span>
+                </a>
+            </mat-list-item>
+          </mat-nav-list>
+        </div>
+        <div class="dashboard-project--reviewed"></div>
       </div>
     </mat-drawer-content>
   </mat-drawer-container>
 
-</div>

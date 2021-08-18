@@ -9,13 +9,13 @@ import { AuthGuard } from './guard/auth.guard';
 import { ProjectDetailsComponent } from './project-details/project-details/project-details.component';
 
 const routes: Routes = [
-  { path: 'login', component: LoginComponent },
-  { path: 'signup', component: SignupComponent },
   {
     path: 'dashboard',
     component: LandingComponent,
     canActivate: [AuthGuard]
   },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
   {
     path: 'project-lists',
     component: ProjectListsComponent,
@@ -24,7 +24,7 @@ const routes: Routes = [
   {
     path: 'project-details',
     component: ProjectDetailsComponent,
-   // canActivate: [AuthGuard]
+    canActivate: [AuthGuard]
   },
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: '**', pathMatch: 'full', component: PageNotFoundComponent },

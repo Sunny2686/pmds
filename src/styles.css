@@ -22,14 +22,7 @@ body {
   color: #1b1a1a;
  }
 
- a:link,
- a:visited,
- a:hover{
-   text-decoration: none;
-   outline: none;
-   display: inline-block;
 
- }
  .btn {
   font-size: 1.8rem;
   letter-spacing: 1px;
@@ -96,7 +89,17 @@ a {
   color: inherit;
   text-decoration: inherit;
 }
+a:link,
+a:visited,
+a:hover{
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
 
+}
+a:link, a:visited{
+  color: ivory;
+}
 
 button,
 input,

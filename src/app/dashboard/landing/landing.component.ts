@@ -11,6 +11,7 @@ import { Observable } from 'rxjs';
 })
 export class LandingComponent implements OnInit {
   public projectCost: any[] = [{ cost: '10-20', color: '#1b64e2' }, { cost: '20-50', color: '#5cb85c' }, { cost: '50-100', color: '#f75616' }, { cost: '100+', color: '#d32323' }];
+  public links = ['HRD Details', 'Medical Equipment', 'New Publictaion', 'Ongoing Project'];
   constructor(
     private sharedService: SharedService,
     private route: Router

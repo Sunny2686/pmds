@@ -17,6 +17,7 @@ export class AuthGuard implements CanActivate, OnDestroy {
   this.subs.sink =  this.shareService.isAuthenticated$.subscribe(value => {
       this.isAuth = value || !!localStorage.getItem('isAuth');
     })
+    console.log(this.isAuth)
   }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean | UrlTree> | boolean | UrlTree {
     if (this.isAuth) {

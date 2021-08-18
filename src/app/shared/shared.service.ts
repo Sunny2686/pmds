@@ -18,7 +18,7 @@ public hidingToolbarMenu$ = this.hidingToolbarMenu$$.asObservable();
     this.afAuth.onAuthStateChanged((value: any) => {
       this.authentication(!!value);
       if(!!value){
-        localStorage.setItem('isAdmin', 'true');
+        localStorage.setItem('isAuth', 'true');
       }
       this.hidingMenu(!!value);
     });
