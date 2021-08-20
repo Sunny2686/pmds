@@ -31,7 +31,7 @@ export class DashboardProgressBarComponent implements OnInit {
         type: 'bar'
       },
       title: {
-        text: 'Historic World Population by Region'
+        text: 'Cost allication to projects'
       },
       xAxis: {
         categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania']
@@ -39,7 +39,7 @@ export class DashboardProgressBarComponent implements OnInit {
       yAxis: {
         min: 0,
         title: {
-          text: "Infosys Stock value in dollar"
+          text: "Cost analysis"
         },
         labels: {
           overflow: 'justify'

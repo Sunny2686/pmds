@@ -1,9 +1,17 @@
-<div class="container mat-elevation-z4" fxLayout="column" fxLayoutAlign="space-between center" >
+<div class="container mat-elevation-z4" fxLayout="column" fxLayoutAlign="space-between center">
   <h3 class="heading--3">Project Table</h3>
-  <mat-form-field appearance="standard" fxFlexAlign="start">
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Enter search term" #input>
-  </mat-form-field>
+  <div style="width: 100%;" fxLayoutAlign="space-between center">
+    <mat-form-field appearance="standard" fxFlexAlign="start">
+      <mat-label>Filter</mat-label>
+      <input matInput (keyup)="applyFilter($event)" placeholder="Enter search term" #input>
+    </mat-form-field>
+    <mat-icon aria-hidden="false" aria-label="add icon" (click)="addProject()"
+     matTooltip="CLICK TO ADD NEW PROJECT" matTooltipPosition="above">
+      <span class="material-icons-two-tone">
+        add_to_queue
+      </span>
+    </mat-icon>
+  </div>
 
   <div class="mat-elevation-z4">
     <table mat-table [dataSource]="dataSource" matSort>

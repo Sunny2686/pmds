@@ -127,3 +127,6 @@ textarea {
   font-weight: 500 !important;
 }
 
+mat-icon{
+  cursor: pointer;
+}

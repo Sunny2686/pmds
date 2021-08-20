@@ -3,29 +3,32 @@ $light-primary-text: $light-text;
 $light-background: #ebf0f3;
 $light-bg-darker-5: darken($light-background, 5%);
 
-.dasuboard{
-
+.dashboard {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
 }
 
 mat-card {
   width: 30rem;
   color: $light-primary-text;
 }
-.btn-modified{
-  background-color:$light-bg-darker-5 ;
+.btn-modified {
+  background-color: $light-bg-darker-5;
 }
-mat-card-title{
+mat-card-title {
   font-size: 1.5rem;
   letter-spacing: 0.4px;
   font-weight: 400;
 }
-mat-drawer-container{
+mat-drawer-container {
   height: 100%;
-  mat-drawer{
+  mat-drawer {
     width: 200px;
     padding: 1rem;
   }
-  mat-drawer-content{
+  mat-drawer-content {
     padding: 1rem;
   }
 }

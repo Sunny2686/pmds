@@ -11,6 +11,7 @@ import { DashboardTableComponent } from './widget/dashboard-table/dashboard-tabl
 import { HighchartsChartModule } from 'highcharts-angular';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { EditDialogBoxComponent } from './edit-dialog-box/edit-dialog-box.component';
+import { AddProjectDialogComponent } from './add-project-dialog/add-project-dialog.component';
 
 
 
@@ -21,7 +22,8 @@ import { EditDialogBoxComponent } from './edit-dialog-box/edit-dialog-box.compon
     DashboardProgressBarComponent,
     DashboardTableComponent,
     PageNotFoundComponent,
-    EditDialogBoxComponent
+    EditDialogBoxComponent,
+    AddProjectDialogComponent
   ],
   imports: [
     CommonModule,

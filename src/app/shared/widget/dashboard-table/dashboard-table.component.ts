@@ -1,4 +1,6 @@
+import { AddProjectDialogComponent } from './../../add-project-dialog/add-project-dialog.component';
 import { Component, OnInit, ChangeDetectionStrategy, AfterViewInit, ViewChild } from '@angular/core';
+import { MatDialog, MatDialogRef } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
@@ -19,10 +21,13 @@ export interface UserData {
 export class DashboardTableComponent implements AfterViewInit {
   displayedColumns: string[] = ['S.No.', 'Project Name', 'Cost', 'Action'];
   dataSource:  MatTableDataSource<any>;
+  private dialogRef!: MatDialogRef<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
-  constructor(private dataService:DataService) {
+  constructor(
+    private dataService:DataService,
+    private dialog: MatDialog) {
     const users = this.dataService.users;
     this.dataSource = new MatTableDataSource(users);
    }
@@ -33,7 +38,7 @@ export class DashboardTableComponent implements AfterViewInit {
     this.dataSource.sort = this.sort;
   }
 
-  applyFilter(event: Event) {
+ public applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
 
@@ -41,7 +46,18 @@ export class DashboardTableComponent implements AfterViewInit {
       this.dataSource.paginator.firstPage();
     }
   }
+public addProject(){
+  this.dialogRef = this.dialog.open(AddProjectDialogComponent, {
+    height: '250px',
+    width: '600px',
+  });
 
+  this.dialogRef.afterClosed().subscribe((result) => {
+    if(result){
+      return
+    }
+  });
+}
 }// END OF CLASS
 
 
