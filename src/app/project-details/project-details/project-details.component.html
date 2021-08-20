@@ -13,10 +13,8 @@
     <h2 class="heading--2">Cohorts for HIV Resistance and Progression in Indian Children and Adults (CoHRPICA) BT/PR21326/MED/29/1158/2016</h2>
   </div>
   <div class="container-background" >
-    <mat-form-field class="example-full-width" appearance="fill">
-      <textarea matInput placeholder="Ex. It makes me feel..."></textarea>
-    </mat-form-field>
     <p class="container-background--text">Cohorts for HIV Resistance and Progression in Indian Children and Adults (CoHRPICA) BT/PR21326/MED/29/1158/2016</p>
+    <button mat-raised-button class="btn" (click)="editBackground('Cohorts for HIV Resistance and Progression in Indian Children and Adults (CoHRPICA) BT/PR21326/MED/29/1158/2016', 'Project Background')">Edit</button>
   </div>
   <div class="container-objectives" fxLayout="column">
     <h4 class="heading--3" fxFlexAlign="center">Objectives</h4>
@@ -26,6 +24,7 @@
         <p matLine class="para">
           <span class="objectives-count">{{i+1}}.</span><span class="objectives"> {{message}}</span>
         </p>
+        <button mat-raised-button class="btn" (click)="editBackground(message,'Project Objectives')">Edit</button>
         <mat-divider></mat-divider>
       </mat-list-item>
     </mat-list>
@@ -37,6 +36,7 @@
         <p class="para" matLine >
           <span class="objectives-count">{{i+1}}.</span><span class="objectives"> {{message}}</span>
         </p>
+        <button mat-raised-button class="btn"  (click)="editBackground(message,'Project Objectives')">Edit</button>
         <mat-divider></mat-divider>
       </mat-list-item>
     </mat-list>

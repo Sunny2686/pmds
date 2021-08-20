@@ -10,6 +10,7 @@ import { DashboardProgressBarComponent } from './widget/dashboard-progress-bar/d
 import { DashboardTableComponent } from './widget/dashboard-table/dashboard-table.component';
 import { HighchartsChartModule } from 'highcharts-angular';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EditDialogBoxComponent } from './edit-dialog-box/edit-dialog-box.component';
 
 
 
@@ -19,7 +20,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     DashboardColumnComponent,
     DashboardProgressBarComponent,
     DashboardTableComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    EditDialogBoxComponent
   ],
   imports: [
     CommonModule,
@@ -40,7 +42,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     DashboardColumnComponent,
     DashboardProgressBarComponent,
     DashboardTableComponent,
-    HighchartsChartModule
+    HighchartsChartModule,
+    EditDialogBoxComponent
   ]
 })
 export class SharedModule { }

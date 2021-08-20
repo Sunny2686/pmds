@@ -16,6 +16,7 @@ import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatListModule} from '@angular/material/list';
 import {TextFieldModule} from '@angular/cdk/text-field';
 import {MatSelectModule} from '@angular/material/select';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 
@@ -39,7 +40,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatProgressBarModule,
     MatListModule,
     TextFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
 
   ],
   exports: [
@@ -58,7 +60,8 @@ import {MatSelectModule} from '@angular/material/select';
     MatProgressBarModule,
     MatListModule,
     TextFieldModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule
   ]
 })
 export class MaterialModule { }

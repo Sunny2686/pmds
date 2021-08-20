@@ -1,0 +1,11 @@
+<h1 mat-dialog-title class="heading--h1" style="text-align: center;">{{data.inputType}}</h1>
+<div mat-dialog-content>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Edit {{data.inputType}}</mat-label>
+    <textarea matInput placeholder="Edit" [formControl]="input"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions align="center">
+  <button mat-raised-button class="btn" (click)="onSave()">Save</button>
+  <button mat-raised-button mat-dialog-close class="btn">Close</button>
+</div>
