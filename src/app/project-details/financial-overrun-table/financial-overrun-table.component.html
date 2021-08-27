@@ -1,0 +1,55 @@
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+  <!--- Note that these columns can be defined in any order.
+        The actual rendered columns are set as a property on the row definition" -->
+
+  <!-- Position Column -->
+  <ng-container matColumnDef="position">
+    <th mat-header-cell *matHeaderCellDef> S.No. </th>
+    <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="Grant Sharing">
+    <th mat-header-cell *matHeaderCellDef> Grant Sharing </th>
+    <td mat-cell *matCellDef="let element"> {{element.grantSharing}} </td>
+  </ng-container>
+
+  <!-- Weight Column -->
+  <ng-container matColumnDef="Infrastructure Sharing">
+    <th mat-header-cell *matHeaderCellDef>Infrastruture Sharing </th>
+    <td mat-cell *matCellDef="let element"> {{element.infrastructureSharing}} </td>
+  </ng-container>
+
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="Industry Partnership">
+    <th mat-header-cell *matHeaderCellDef>Industry Partnership </th>
+    <td mat-cell *matCellDef="let element"> {{element.industryPartnership}} </td>
+  </ng-container>
+  <!-- Symbol Column -->
+  <ng-container matColumnDef="Other Ministeries/Agensis">
+    <th mat-header-cell *matHeaderCellDef> Other Ministeries/Agensis </th>
+    <td mat-cell *matCellDef="let element"> {{element.otherMinisteries}} </td>
+  </ng-container>
+    <!-- Symbol Column -->
+    <ng-container matColumnDef="Policy Related">
+      <th mat-header-cell *matHeaderCellDef> Policy Related </th>
+      <td mat-cell *matCellDef="let element"> {{element.policyRelated}} </td>
+    </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
+<button mat-raised-button (click)="openOutcomeInput=true">Others.</button>
+<div *ngIf="openOutcomeInput">
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Add new outcome</mat-label>
+    <input matInput placeholder="Add new outcome" [formControl]="outcomeInput">
+  </mat-form-field>
+  <input type="file" style="height: 40px;">
+  <div fxLayoutAlign="space-between center">
+    <button type="button" mat-raised-button class="btn" (click)="addingColumn()">Add Outcome</button>
+    <mat-icon aria-hidden="false" (click)="close()">close</mat-icon>
+  </div>
+</div>

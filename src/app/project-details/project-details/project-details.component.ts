@@ -11,9 +11,12 @@ import { MatDialog, MatDialogRef } from '@angular/material/dialog';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ProjectDetailsComponent implements OnInit {
-
+  public outcomes:string[] = ['Publications', 'Patients', 'Products Created', 'Products Developed', 'Products Commercialized', 'Man Power Trained', 'Public Private Partnership', 'International Collaboration','Startups Created'];
   public projectDetailsForm!: FormGroup;
   private dialogRef!: MatDialogRef<any>;
+  public outcomeInput = new FormControl('');
+  public openOutcomeInput = false;
+  public overrunValue: string = 'No';
   public objectives: any[] = [
     'Scientific partnership of the ESRF',
     ' To enable access to macromolecular crystallography beamlines (ID23-1, ID29, ID30B, ID30A-1, ID23-2 and ID30A-3)',
@@ -28,6 +31,7 @@ export class ProjectDetailsComponent implements OnInit {
     private dialog: MatDialog) { }
 
   ngOnInit(): void {
+    console.log(this.overrunValue)
     this.projectDetailsForm = this.fb.group({
       background: ['', [Validators.required]],
       objectives: ['', [Validators.required]],
@@ -48,5 +52,17 @@ export class ProjectDetailsComponent implements OnInit {
       }
     });
   }
+public addingOutcome(){
+  if(this.outcomeInput.value){
+    this.outcomes.push(this.outcomeInput.value);
+    this.openOutcomeInput = false;
+  }
+}
+public deleteOutcome(){
+  this.outcomes.pop();
+}
+public close(){
+  this.openOutcomeInput = false;
+}
 
 }//END OF CLASS

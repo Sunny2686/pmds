@@ -18,6 +18,8 @@ import {TextFieldModule} from '@angular/cdk/text-field';
 import {MatSelectModule} from '@angular/material/select';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatBadgeModule} from '@angular/material/badge';
+
 
 
 
@@ -43,7 +45,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     TextFieldModule,
     MatSelectModule,
     MatDialogModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatBadgeModule
 
   ],
   exports: [
@@ -64,7 +67,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     TextFieldModule,
     MatSelectModule,
     MatDialogModule,
-    MatTooltipModule
+    MatTooltipModule,
+    MatBadgeModule
   ]
 })
 export class MaterialModule { }
